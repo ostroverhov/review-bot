@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:reviewbot;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    enabled: true
+
+review-bot:
+  gitlab-webhook-secret: test-secret
+  close-reaction-emoji: white_check_mark
+  team-rules-refresh-interval-ms: 3600000
+
+slack:
+  bot:
+    token: xoxb-test-token-placeholder

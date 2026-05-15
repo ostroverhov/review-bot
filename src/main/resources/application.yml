@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: review-bot
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/reviewbot}
+    username: ${SPRING_DATASOURCE_USERNAME:reviewbot}
+    password: ${SPRING_DATASOURCE_PASSWORD:reviewbot}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+slack:
+  bot:
+    token: ${SLACK_BOT_TOKEN:}
+
+review-bot:
+  gitlab-webhook-secret: ${GITLAB_WEBHOOK_SECRET:}
+  close-reaction-emoji: ${REVIEW_BOT_CLOSE_REACTION:white_check_mark}
+  team-rules-refresh-interval-ms: ${REVIEW_BOT_TEAM_RULES_REFRESH_INTERVAL_MS:3600000}
+
+logging:
+  level:
+    org.reviewbot: INFO

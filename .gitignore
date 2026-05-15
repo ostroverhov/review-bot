@@ -1,4 +1,5 @@
 .gradle
+.idea/
 **/build/
 !**/src/**/build/
 
@@ -13,6 +14,10 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+# Local env / secrets
+.env
+.env.local
 
 # Eclipse Gradle plugin generated files
 # Eclipse Core
